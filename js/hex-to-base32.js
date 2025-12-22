@@ -1,7 +1,10 @@
-new Vue({
-  el: '#app',
-  data: {
-    hex: '',    
+const { createApp } = Vue;
+
+createApp({
+  data() {
+    return {
+      hex: '',
+    };
   },
 
   computed: {
@@ -10,4 +13,4 @@ new Vue({
       return OTPAuth.Utils.b32.decode(buf);
     }
   }
-});
+}).mount('#app');
